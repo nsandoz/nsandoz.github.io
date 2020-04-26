@@ -5,7 +5,7 @@ body {
     
 }
 h1 {
-    margin: 1em 0em 0em 5% ;
+    margin: 1em 0em 0em 0em ;
     font-family: sans-serif;
     color: rgb(20,120,180);
     font-size: 2.5em;
@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    margin: 1.5em 0em 0em 5% ;
+    margin: 1.5em 0em 0em 0em ;
     font-family: sans-serif;
     color: rgb(100,10,160);
     font-size: 1.7em;
@@ -22,7 +22,7 @@ h2 {
 }
 
 h3 {
-    margin: 1.5em 0em 0em 5% ;
+    margin: 1.5em 0em 0em 0em ;
     font-family: sans-serif;
     color: rgb(20,120,180);
     font-size: 1.3em;
