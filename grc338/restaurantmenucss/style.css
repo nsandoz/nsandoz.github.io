@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    margin: 1.5em 0em 0em 0em ;
+    margin: 1.5em 0em 0em 1% ;
     font-family: sans-serif;
     color: rgb(100,10,160);
     font-size: 1.7em;
@@ -22,7 +22,7 @@ h2 {
 }
 
 h3 {
-    margin: 1.5em 0em 0em 0em ;
+    margin: 1.5em 0em 0em 2% ;
     font-family: sans-serif;
     color: rgb(20,120,180);
     font-size: 1.3em;
@@ -34,19 +34,19 @@ h4 {
     font-weight: 700;
     color: rgb(200,120,50);
     font-size: 1.1em;
-    margin: 2em 0em .2em 0em ;
-    
+    margin: 2em 0em .2em 2% ;
 }
 
 p {
     font-family: serif;
     color: rgb(190,130,000);
-    margin: .5em 0em 0em 5% ;
+    margin: .5em 0em 0em 2% ;
     
 }   
 ul {
     color: rgb(200,120,50);
     list-style-type: square;
+     margin: 0em 0em 0em 2% ;
 }
 .price {
     font-weight: 700;
