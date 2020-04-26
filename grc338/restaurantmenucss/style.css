@@ -9,16 +9,18 @@ h1 {
     font-family: sans-serif;
     color: rgb(20,120,180);
     font-size: 2.5em;
+    text-align: center;
     
 }
 
 h2 {
     margin: 1.5em 0em 0em 1% ;
     font-family: sans-serif;
-    color: rgb(100,10,160);
-    font-size: 1.7em;
+    color: rgb(20,120,180);
+    font-size: 1.5em;
     text-transform: uppercase;
     text-decoration: underline;
+    text-align: center;
 }
 
 h3 {
