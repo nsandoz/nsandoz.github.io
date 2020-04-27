@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-    margin: 1em 0em 2em 1% ;
+    margin: 1.5em 0em 2em 1% ;
     font-family: sans-serif;
     color: rgb(20,120,180);
     font-size: 1.5em;
@@ -42,7 +42,7 @@ h4 {
 p {
     font-family: serif;
     color: rgb(190,130,000);
-    margin: .5em 0em 0em 2% ;
+    margin: .5em 3em 0em 2% ;
     
 }   
 ul {
