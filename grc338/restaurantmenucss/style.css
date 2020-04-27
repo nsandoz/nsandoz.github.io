@@ -7,7 +7,7 @@ body {
 h1 {
     margin: 1em 0em 0em 0em ;
     font-family: serif;
-    color: rgb(0,0,0);
+    color: rgb(20,120,180);
     font-size: 2.5em;
     text-align: center;
     
@@ -16,7 +16,7 @@ h1 {
 h2 {
     margin: .5em 0em 2em 1% ;
     font-family: serif;
-    color: rgb(20,120,180);
+    color: rgb(0,0,0);
     font-size: 1.5em;
     text-transform: uppercase;
     text-decoration: underline;
