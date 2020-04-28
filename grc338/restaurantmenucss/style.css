@@ -30,7 +30,7 @@ h3 {
 }
 
 h4 {
-   font-family: serif;
+   font-family: sans-serif;
     font-weight: 700;
     color: rgb(160,20,20);
     font-size: 1.3em;
@@ -38,8 +38,8 @@ h4 {
 }
 
 p {
-    font-family: serif;
-    font-size: 1.2em;
+    font-family: sans-serif;
+    font-size: 1.1em;
     color: rgb(80,80,0);
     margin: .1em 5em 0em 5% ;
     
