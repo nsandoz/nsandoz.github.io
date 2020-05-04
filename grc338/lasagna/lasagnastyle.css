@@ -1,78 +1,76 @@
 /*CSS DOCUMENT*/
-   
-@import url("https://use.typekit.net/bor8ibz.css");
-    
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
 
+@import url("https://use.typekit.net/bor8ibz.css");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
 img {
-    width: 58%;
-    margin: 0em 0em 0em .5em;
+	width: 58%;
+	margin: 0em 0em 0em .5em;
 }
 
-body{
-       background-color: rgb(220,220,220);
+body {
+	background-color: rgb(220, 220, 220);
 }
 
 header h1 {
-    font-family: all-round-gothic,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2.5em;
-    margin: .7em 0em 0em 0em;
+	font-family: all-round-gothic, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 2.5em;
+	margin: .7em 0em 0em 0em;
 }
 
 header h2 {
-    font-family: all-round-gothic,sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5em;
-    margin: 0em 0em 1em 0em;
+	font-family: all-round-gothic, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5em;
+	margin: 0em 0em 1em 0em;
 }
 
 div.container {
-    background-color: rgb(255,255,255); 
-    margin: 2em 20% 2em 20%;
-    padding: 1em 6em 1em 2em;
+	background-color: rgb(255, 255, 255);
+	margin: 2em 20% 2em 20%;
+	padding: 1em 6em 1em 2em;
 }
 
 div.intro p {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1em;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
 }
 
-div.maincontent h3{
-    font-family: all-round-gothic,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.2em;
-    margin: 1.5em 0em 0em 0em;
+div.maincontent h3 {
+	font-family: all-round-gothic, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1.2em;
+	margin: 1.5em 0em 0em 0em;
 }
 
 ul {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1em;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
 }
 
 div.ingredients li {
-    margin: .2em; 
-    list-style-type: circle;
+	margin: .2em;
+	list-style-type: circle;
 }
 
 div.directions li {
-  margin: 1em;  
+	margin: 1em;
 }
 
 ol {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1em;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
 }
 
 footer h6 {
-    font-family: all-round-gothic,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: .7em;
+	font-family: all-round-gothic, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: .7em;
 }
