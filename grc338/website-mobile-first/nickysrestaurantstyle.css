@@ -3,8 +3,7 @@
 
 /*CSS DOCUMENT*/
 
-@import url("https://use.typekit.net/bor8ibz.css");
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+@import url("https://use.typekit.net/odw6efh.css");
 img {
 	width: 100%;
 	margin: 0em 0em 1em 0em;
@@ -19,24 +18,24 @@ body {
 }
 
 h1 {
-	font-family: all-round-gothic, sans-serif;
-	font-weight: 600;
-	font-style: normal;
+	font-family: sirenne-eighteen-mvb-roman-s, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 	font-size: 2em;
 	margin: .7em 0em .5em 0em;
 }
 
 h2 {
-	font-family: all-round-gothic, sans-serif;
-	font-weight: 400;
-	font-style: normal;
+	font-family: sirenne-eighteen-mvb-roman-s, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 	font-size: 1.5em;
 	margin: .5em 0em em 0em;
 }
 
 p {
-    font-family: sans-serif;
-	font-weight: 400;
+    font-family: sirenne-eighteen-mvb, serif;
+    font-weight: 400;
 	font-style: normal;
 	font-size: .9em;
     line-height: 1.2em;
@@ -50,11 +49,12 @@ nav ul {
 
 nav ul li {
 	list-style: none;
-	font-family: all-round-gothic, sans-serif;
+	font-family: sirenne-eighteen-mvb-roman-s, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    font-style: normal;
     display: inline;
     margin: 1.5em 1em 0em 0em;
-    font-family: sans-serif;
-    text-transform: uppercase;
     font-weight: 700;
 }
 
@@ -86,21 +86,27 @@ div.body {
 
 .menu h3 {
 	margin: 2em 0em 0em 2%;
-	font-family: sans-serif;
+	font-family: sirenne-eighteen-mvb-roman-s, serif;
+    font-weight: 400;
+    font-style: normal;
 	color: rgb(50, 50, 50);
-	font-size: 1.3em;
+	font-size: 1.5em;
 }
 
 .menu h4 {
-	font-family: sans-serif;
+	font-family: sirenne-eighteen-mvb, serif;
+    font-weight: 400;
+    font-style: normal;
 	font-weight: 700;
 	color: rgb(160, 20, 20);
-	font-size: 1.1em;
+	font-size: 1.2em;
 	margin: 1.3em 0em .4em 5%;
 }
 
 .menu p {
-	font-family: sans-serif;
+	font-family: sirenne-eighteen-mvb, serif;
+    font-weight: 400;
+    font-style: normal;
 	font-size: 1em;
 	color: rgb(80, 80, 0);
     margin: .1em 0em 0em 5%;
