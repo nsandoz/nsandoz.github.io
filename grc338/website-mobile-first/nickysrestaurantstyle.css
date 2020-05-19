@@ -1,11 +1,13 @@
 /*CSS DOCUMENT*/
 
+
+/*CSS DOCUMENT*/
+
 @import url("https://use.typekit.net/odw6efh.css");
 img {
 	width: 100%;
 	margin: 0em 0em 1em 0em;
 }
-
 .logo img {
 	width: 100%;
 	margin: 0em 0em 0em 0em;
@@ -17,28 +19,28 @@ body {
 
 h1 {
 	font-family: sirenne-eighteen-mvb-roman-s, sans-serif;
-	font-weight: 400;
-	font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 	font-size: 2em;
 	margin: .7em 0em .5em 0em;
 }
 
 h2 {
 	font-family: sirenne-eighteen-mvb-roman-s, sans-serif;
-	font-weight: 400;
-	font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 	font-size: 1.5em;
 	margin: .5em 0em em 0em;
 }
 
 p {
-	font-family: sirenne-eighteen-mvb, serif;
-	font-weight: 400;
+    font-family: sirenne-eighteen-mvb, serif;
+    font-weight: 400;
 	font-style: normal;
 	font-size: .9em;
-	line-height: 1.2em;
+    line-height: 1.2em;
 	margin: 0em 0em 1em 0em;
-	padding: 0em 1em 0em 0em;
+    padding: 0em 1em 0em 0em;
 }
 
 nav ul {
@@ -48,12 +50,12 @@ nav ul {
 nav ul li {
 	list-style: none;
 	font-family: sirenne-eighteen-mvb-roman-s, sans-serif;
-	font-weight: 400;
-	font-size: 1.2em;
-	font-style: normal;
-	display: inline;
-	margin: 1.5em .4em 0em 0em;
-	font-weight: 700;
+    font-weight: 400;
+    font-size: 1.2em;
+    font-style: normal;
+    display: inline;
+    margin: 1.5em .4em 0em 0em;
+    font-weight: 700;
 }
 
 nav ul li a {
@@ -62,7 +64,7 @@ nav ul li a {
 }
 
 .logo {
-	padding: 0em 1.2em 0em 0em;
+    padding: 0em 1.2em 0em 0em;
 }
 
 div.container {
@@ -76,19 +78,16 @@ div.menu header {
 	margin: 2em 5% 2em 5%;
 	padding: 1em 6em 1em 2em;
 }
-
 div.body {
 	background-color: rgb(255, 255, 255);
 	margin: 2em 5% 2em 5%;
 	padding: 1em 3em 1em 2em;
 }
-
 div.menu_body {
 	background-color: rgb(255, 255, 255);
 	margin: 2em 5% 2em 5%;
 	padding: 1em;
 }
-
 .menu body {
 	background-color: rgb(240, 240, 240);
 }
@@ -96,16 +95,16 @@ div.menu_body {
 .menu h3 {
 	margin: 2em 0em 0em 2%;
 	font-family: sirenne-eighteen-mvb-roman-s, serif;
-	font-weight: 400;
-	font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 	color: rgb(50, 50, 50);
 	font-size: 1.5em;
 }
 
 .menu h4 {
 	font-family: sirenne-eighteen-mvb, serif;
-	font-weight: 400;
-	font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 	font-weight: 700;
 	color: rgb(160, 20, 20);
 	font-size: 1.2em;
@@ -114,11 +113,12 @@ div.menu_body {
 
 .menu p {
 	font-family: sirenne-eighteen-mvb, serif;
-	font-weight: 400;
-	font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 	font-size: 1em;
 	color: rgb(80, 80, 0);
-	margin: .1em 0em 0em -10%;
+    margin: .1em 0em 0em -10%;
+	
 }
 
 .menu .price {
