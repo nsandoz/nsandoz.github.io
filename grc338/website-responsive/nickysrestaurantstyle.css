@@ -2,16 +2,15 @@
 
 @import url("https://use.typekit.net/zcv3piw.css");
 img {
-	width: 100%;
-	max-width: 20em;
 	display: block;
+	max-width: 20em;
 	margin: 1em auto;
 }
 
 .logo img {
-	width: 100%;
+	display: block;
 	max-width: 20em;
-	margin: 0em;
+	margin: 0em 0em .5em 0em;
 }
 
 body {
@@ -27,7 +26,7 @@ h1 {
 	text-align: center;
 }
 
-h3 {
+h2 {
 	margin: 2em 0em 0em 2%;
 	font-family: transat-text, sans-serif;
 	font-weight: 500;
@@ -37,7 +36,7 @@ h3 {
 	font-size: 1.8em;
 }
 
-h4 {
+h3 {
 	font-family: transat-text, sans-serif;
 	font-weight: 500;
 	font-style: normal;
@@ -47,7 +46,7 @@ h4 {
 	margin: 1.5em auto 0em auto;
 }
 
-h5 {
+h4 {
 	font-family: transat-text, sans-serif;
 	font-weight: 300;
 	font-size: .8em;
@@ -57,7 +56,6 @@ p {
 	font-family: transat-text, sans-serif;
 	font-weight: 300;
 	font-style: normal;
-	font-size: 1em;
 	max-width: 30em;
 	margin: 0em auto 0em 0em;
 }
@@ -100,17 +98,21 @@ div.container {
 	background-color: rgb(255, 255, 255);
 	margin: 0 auto;
 	max-width: 55em;
-	padding: 1em 2em 2em 2em;
+	padding: 1.5em 2em 2em 2em;
 }
 
 footer {
 	clear: both;
 	display: block;
-	color: rgb(220, 220, 220);
+	color: rgb(200, 200, 200);
 	padding-top: 2em;
 }
 
 @media only screen and (min-width: 45em) {
+	div.bodyItems {
+		display: flex;
+		align-items: center;
+	}
 	div.block {
 		width: 45%;
 		float: left;
@@ -118,13 +120,9 @@ footer {
 		display: flex;
 		align-items: center;
 	}
-	.block p {
-		margin-left: 0;
-		margin-top: 0;
-	}
 	div.container {
 		width: auto;
-		padding: 1em 5em 2em 5em;
+		padding: 2em 5em;
 	}
 	img {
 		width: 100%;
@@ -132,9 +130,17 @@ footer {
 		display: block;
 		margin: 1em auto;
 	}
+	.picCrop img {
+		width: 100%;
+		max-width: 50em;
+		height: 10em;
+		object-fit: cover;
+		display: block;
+		margin: 1em auto;
+	}
 }
 
-.menu .price {
+.price {
 	font-weight: 500;
 	font-style: italic;
 	color: rgb(80, 80, 0);
