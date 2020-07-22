@@ -239,6 +239,9 @@ li.selected {
     .collage img {
         display: none;
     }
+	 .AboutpicCrop img {
+        max-width: 100%;
+    }
     .logoAlign {
         text-align: center;
         
