@@ -18,7 +18,8 @@ h1 {
     color: rgb(255,255,255);
     font-size: 3em;
     max-width: 20em;
-    display: inline-block; 
+    display: inline-block;
+    text-align: center;
     
 }
 
@@ -89,6 +90,11 @@ h6 {
     flex: 50%;
     max-width: 50%;
   }
+     .columnBlog {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -98,4 +104,10 @@ h6 {
     flex: 100%;
     max-width: 100%;
   }
+    .columnBlog {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+    
 }
