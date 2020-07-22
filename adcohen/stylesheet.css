@@ -1,0 +1,256 @@
+/*CSS DOCUMENT*/
+@import url("https://use.typekit.net/ipj0jot.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+.picCrop img {
+		width: 100%;
+		max-width: 60em;
+		height: 30em;
+		object-fit: cover;
+		display: block;
+		margin: 1em auto 0em 0em;
+	}
+.CollagepicCrop {
+    text-align: center;
+}
+.CollagepicCrop img {
+    width: 100%;
+    max-width: 80%;
+        height: auto;
+		margin: 1em auto 1em 0em;
+}
+.AppealpicCrop img {	
+    width: 100%;
+    max-width: 40%;
+        height: auto;
+		margin: 1em auto 1em 0em;
+	}
+.AboutpicCrop img {	
+    width: 100%;
+    max-width: 60%;
+        height: auto;
+		margin: 3em auto 1em 0em;
+	}
+
+h1 {
+	font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+	font-size: 2.8em;
+	margin: 1.3em 0em .8em 0em;
+	text-align: left;
+}
+
+h2 {
+	margin: 2em 0em 0em 2%;
+	font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	color: rgb(50, 50, 50);
+	margin: 2em 0 0em 0;
+	font-size: 1.8em;
+}
+
+h3 {
+	font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	color: rgb(255,255,255);
+	font-size: 1.7em;
+	margin: 1.5em auto 0em auto;
+}
+
+h4 {
+	font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: underline;
+	font-size: 1.5em;
+    color: rgb(20,112,175);
+}
+
+h5 {
+	font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+	font-size: 1.8em;
+    color: rgb(20,112,175);
+    margin-bottom: 0;
+}
+
+p {
+	font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+	max-width: 45em;
+    line-height: 1.8em ;
+	margin: 1em auto 1em 0em;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 1em 0em -1em 0em;
+    color: rgb(20,112,175);
+}
+.legal {
+    text-decoration: underline;
+    margin-top: 1em;
+}
+
+.logo {
+  font-family: futura-pt, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: rgb(255,255,255);
+    text-decoration: none;  
+}
+
+.logoAlign {
+display:inline-block; 
+}
+
+.header {
+    background-color: rgb(20,112,175);
+    padding: 2.4em;
+    margin: auto;
+   
+}
+
+.block-a {
+    background-color: rgb(255,255,255);
+    padding: 3em;
+    padding-bottom: 7em;
+}
+
+.block-b {
+    background-color: rgb(142,182,220);
+    color: white;
+    padding: 3em;
+    padding-bottom: 7em;
+}
+
+.block-c {
+    background-color: rgb(234,234,238);
+    padding: 3em;
+    padding-bottom: 7em;
+    
+}
+
+.location-block {
+    display: inline-grid;
+    margin-right: 3em;
+        
+}
+.footer-block {
+   margin-bottom: 2em; 
+}
+nav {
+    margin: 0em;
+    padding: 0em;
+    float: right;    
+    top:50%; margin-top: -.5em
+}
+
+a.selected {
+    border-bottom: 1px solid rgb(255,255,255);
+}
+nav ul li {
+	list-style: none;
+	font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+	font-size: 1.1em;
+	display: inline;
+	margin-right: .8em;
+    
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: rgb(255,255,255);
+}
+
+li.selected {
+	font-weight: 700;
+    border-bottom: 1px solid rgb(255,255,255);
+}
+
+
+
+/* Buttons and Stuff */
+.button {
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button2 {
+    background-color: rgb(20,112,175);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 2em; 
+
+} /* Blue */
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    header {
+        text-align: center;
+        margin: auto;
+    }
+   .collage{
+    background-image: url(/images/adc-collage.png);
+       height: 20em;
+       background-size: cover;
+    padding: 3em;
+    padding-bottom: 7em;
+}
+    .collage img {
+        display: none;
+    }
+    .logoAlign {
+        text-align: center;
+        
+    }
+    .logo {
+        font-size: 1.3em;
+        text-align: center;
+        margin: auto;
+    }
+nav a {
+    font-size: .7em;
+    float: none;
+    text-align: center;
+}
+    }
