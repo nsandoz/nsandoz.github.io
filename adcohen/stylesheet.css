@@ -238,7 +238,7 @@ li.selected {
         font-size: 1.5em;
     }
    .collage{
-    background-image: url(/images/adc-collage.png);
+    background-image: url(/adcohen/images/adc-collage.png);
        height: 16em;
        background-size: cover;
     padding: 3em;
@@ -267,7 +267,7 @@ li.selected {
         
     }
     .logo {
-        font-size: 1.3em;
+        font-size: 1.4em;
         text-align: center;
         margin: auto;
     }
