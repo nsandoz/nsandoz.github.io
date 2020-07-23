@@ -225,13 +225,21 @@ li.selected {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-    header {
+    .header {
         text-align: center;
         margin: auto;
+        padding: 1em 0em;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
     }
    .collage{
-    background-image: url(/adcohen/images/adc-collage.png);
-       height: 20em;
+    background-image: url(/images/adc-collage.png);
+       height: 16em;
        background-size: cover;
     padding: 3em;
     padding-bottom: 7em;
@@ -239,9 +247,21 @@ li.selected {
     .collage img {
         display: none;
     }
-	 .AboutpicCrop img {
+    .AppealpicCrop img {
         max-width: 100%;
     }
+    .AboutpicCrop img {
+        max-width: 100%;
+    }
+    .picCrop img {
+        width: 100%;
+		max-width: 100%;
+		height: auto;
+		object-fit: cover;
+		display: block;
+		margin: 1em auto 0em 0em;  
+    }
+    
     .logoAlign {
         text-align: center;
         
@@ -251,8 +271,20 @@ li.selected {
         text-align: center;
         margin: auto;
     }
+    nav {
+    margin: auto;
+    padding: 0em;
+    float: none;    
+    top:50%; margin-top: -.5em;
+    
+}
+    nav ul {
+        padding-left: 2%;
+    }
+    
 nav a {
-    font-size: .5em;
+    display: inline-block;
+    font-size: .7em;
     float: none;
     text-align: center;
 }
