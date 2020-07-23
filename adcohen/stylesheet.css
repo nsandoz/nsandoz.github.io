@@ -233,6 +233,7 @@ li.selected {
     
     h1 {
         font-size: 2em;
+	margin: .3em 0em .8em 0em;
     }
     h3 {
         font-size: 1.5em;
