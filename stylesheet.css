@@ -1,0 +1,327 @@
+/* Modern Nicky Sandoz Photography Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+.header {
+    background-color: #fff;
+    padding: 2.4em;
+    border-bottom: 1px solid #000;
+}
+
+.logoAlign {
+    display: inline-block;
+}
+
+.logo {
+    font-family: 'Futura', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    float: right;
+    margin-top: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 0.8em;
+    font-size: 1.1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    transition: border-bottom 0.2s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid #666;
+}
+
+li.selected {
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1 {
+    font-size: 2.8em;
+    margin: 1.3em 0 0.8em 0;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin: 2em 0 0 0;
+    font-weight: 400;
+    color: rgb(50, 50, 50);
+}
+
+h3 {
+    font-size: 1.7em;
+    margin: 1.5em auto 0 auto;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    line-height: 1.4;
+}
+
+h5 {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-weight: 300;
+    max-width: 45em;
+    line-height: 1.8em;
+    margin: 1em auto 1em 0;
+    font-size: 1em;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* ===== CONTENT BLOCKS ===== */
+.block-a {
+    background-color: rgb(234, 234, 238);
+    padding: 3em;
+    padding-bottom: 7em;
+}
+
+.block-b {
+    background-color: rgb(130, 130, 130);
+    color: white;
+    padding: 3em;
+    padding-bottom: 7em;
+}
+
+.block-c {
+    background-color: rgb(234, 234, 238);
+    padding: 3em;
+    padding-bottom: 7em;
+}
+
+.block-c2 {
+    background-color: rgb(234, 234, 238);
+    padding: 2em 0;
+    text-align: center;
+}
+
+/* ===== IMAGES ===== */
+.picCrop img {
+    width: 100%;
+    max-width: 60em;
+    height: 35em;
+    object-fit: cover;
+    display: block;
+    margin: 1em auto 0 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.CollagepicCrop {
+    text-align: center;
+}
+
+.CollagepicCrop img {
+    max-width: 70%;
+    height: auto;
+    margin: 1em auto;
+}
+
+.AppealpicCrop img {
+    width: 100%;
+    max-width: 40%;
+    height: auto;
+    margin: 1em auto 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.AboutpicCrop img {
+    width: 100%;
+    max-width: 24%;
+    height: auto;
+    margin: 3em auto 1em 0;
+    border-radius: 8px;
+}
+
+/* ===== BUTTONS ===== */
+.button {
+    border: none;
+    color: rgb(30, 30, 30);
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2em 0.5em 0 0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button2 {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button2:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FOOTER ===== */
+footer.block-a {
+    text-align: center;
+}
+
+.footer-block {
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+.location-block {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+footer a {
+    color: rgb(30, 30, 30);
+    text-decoration: none;
+    margin: 0 0.3em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+        padding: 1.4em 1em;
+    }
+
+    .logoAlign {
+        text-align: center;
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    .logo {
+        font-size: 1.4em;
+    }
+
+    nav {
+        float: none;
+        margin-top: 0;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        font-size: 0.9em;
+        margin-right: 0.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 0.5em 0 0.8em 0;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .block-a, .block-b, .block-c {
+        padding: 2em 1.5em;
+        padding-bottom: 4em;
+    }
+
+    .picCrop img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .AppealpicCrop img,
+    .AboutpicCrop img {
+        max-width: 100%;
+        float: none !important;
+        margin: 1em auto;
+    }
+
+    .CollagepicCrop img {
+        max-width: 90%;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        margin: 1em 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    nav ul li {
+        font-size: 0.8em;
+        margin-right: 0.3em;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .block-a, .block-b, .block-c {
+        padding: 1.5em 1em;
+        padding-bottom: 3em;
+    }
+}
