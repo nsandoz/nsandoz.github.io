@@ -1,51 +1,31 @@
 name: Auto-Generate Gallery
 
-# This GitHub Action automatically creates a list of all images in your Portfolio folder
-# Runs every time you push changes to your repository
+# Rebuilds gallery-images.json (filenames plus each photo's real pixel
+# dimensions) whenever photos are added to or removed from images/Portfolio/,
+# so gallery.html picks up new work without any hand-editing.
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'images/Portfolio/**'
+      - 'update-gallery.py'
   workflow_dispatch:  # Allows manual triggering
+
+permissions:
+  contents: write
 
 jobs:
   generate-gallery:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    
+      uses: actions/checkout@v4
+
     - name: Generate gallery images JSON
-      run: |
-        # Create gallery-images.json with all image files from Portfolio folder
-        echo "{" > gallery-images.json
-        echo '  "images": [' >> gallery-images.json
-        
-        # Find all image files and format as JSON array
-        cd images/Portfolio
-        files=$(ls -1 *.jpg *.jpeg *.png *.JPG *.JPEG *.PNG 2>/dev/null | sort -r)
-        
-        first=true
-        for file in $files; do
-          if [ "$first" = true ]; then
-            echo "    \"$file\"" >> ../../gallery-images.json
-            first=false
-          else
-            echo "    ,\"$file\"" >> ../../gallery-images.json
-          fi
-        done
-        
-        cd ../..
-        echo "  ]," >> gallery-images.json
-        echo "  \"count\": $(ls -1 images/Portfolio/*.{jpg,jpeg,png,JPG,JPEG,PNG} 2>/dev/null | wc -l | tr -d ' ')," >> gallery-images.json
-        echo "  \"last_updated\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"" >> gallery-images.json
-        echo "}" >> gallery-images.json
-    
+      run: python3 update-gallery.py
+
     - name: Commit and push if changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
