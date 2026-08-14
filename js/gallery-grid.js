@@ -283,12 +283,19 @@
         }
 
         // Clicking the dark space around a photo dismisses it, the way clicking
-        // outside any modal does. A click that ends a swipe doesn't count.
+        // outside any modal does. The arrows sit inside the stage, so their
+        // clicks bubble through here — they must not also be read as a click on
+        // the backdrop, or tapping one would advance the photo and immediately
+        // close the lightbox. A click that merely ends a swipe is ignored too.
         stage.addEventListener('click', function (event) {
-            if (!wasSwipe && event.target.tagName !== 'IMG') {
+            var endedASwipe = wasSwipe;
+            wasSwipe = false;
+            if (endedASwipe || event.target.closest('.lightbox-arrow')) {
+                return;
+            }
+            if (event.target.tagName !== 'IMG') {
                 close();
             }
-            wasSwipe = false;
         });
 
         stage.addEventListener('pointerup', finish);
