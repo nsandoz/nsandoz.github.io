@@ -1,70 +1,53 @@
 <!DOCTYPE html>
-<html>
-   
+<html lang="en">
+
     <head>
-         <meta http-equiv="pragma" content="no-cache" />
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
+      <link rel="icon" type="image/svg+xml" href="favicon.svg">
+      <script src="js/include-partials.js" defer></script>
       <title>Nicky Sandoz Photography</title>
+      <meta name="description" content="Nicky Sandoz Photography — portrait, engagement, and life event photography. Browse the gallery and book a session.">
+      <meta property="og:title" content="Nicky Sandoz Photography">
+      <meta property="og:description" content="Portrait, engagement, and life event photography. Browse the gallery and book a session.">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="images/site/collage1.png">
    </head>
    <body>
-      <div class="header">
-         <!-- Top Navigation Menu -->
-         <div class="logoAlign"><a class="logo" href="index.html">Nicky Sandoz Photography</a></div>
-         <nav>
-            <ul>
-               <li class="selected"><a href="index.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="gallery.html">Photo Gallery</a></li>
-                <li><a href="contact.html">Book a Session</a></li>
-             </ul>
-         </nav>
-      </div>
+      <div id="site-header" data-include="partials/header.html" data-mark-nav></div>
       <!-- Main Body Content -->
+      <main>
       <div class="block-c2">
-         <div class="CollagepicCrop"><img src="images/Portfolio/collage1.png" alt="Collage of Various Portraits"></div>
+         <div class="CollagepicCrop"><img src="images/site/collage1.png" width="1297" height="942" alt="Collage of Various Portraits"></div>
        </div>
           
       <div class="block-b">
          <h1>Engagements, Live Events, and More!</h1>
-         <div class="picCrop"><img src="images/Portfolio/image14.jpg"></div>
+         <div class="picCrop"><img src="images/gallery/image14.jpg" width="2016" height="1344" alt="Engaged couple embracing outdoors and smiling, showing off the engagement ring"></div>
          <h3>"Nicky is the best! He has photographed my graduation photos, individual portraits, and even my engagement session. I would book him for any occasion because of his great eye for portraits, his amazing editing skills, and his friendly and relaxed demeanor. <br/> I love how he edits the photos the perfect amount—bright and full of life without looking artificial. <br/> I will continue to recommend Nicky to all of my friends and family for their photography needs!" <br>— Rachel Pajer</h3>
          <p>Check out the gallery to see a broad range of photography!</p>
           
-         <a href="gallery.html"><button class="button button2">View Gallery</button></a>
+         <a href="gallery.html" class="button button2">View Gallery</a>
       </div>
       <div class="block-c">
          <h1>About Me</h1>
          <p>Hello! I'm Nicky, and I take photos of people.</p>
          <p>Ever since I was very young I've been facinated with photography. My first camera was a cheap Kodak point-and-shoot my grandma gave to me, and ever since I first clicked the shutter button I became obsessed with the ability to recreate (and create) life and art with a camera.</p>
          <p>I learned how to use a DSLR camera in 7th grade, and have been honing my skills ever since. Take a look at my work in my gallery, and if you're interested book a session with me!</p>
-         <a href="about.html"><button class="button button2">About Me!</button></a>
+         <a href="about.html" class="button button2">About Me!</a>
       </div>
       <div class="block-b">
          <h1>Portraits for Any Occasion</h1>
-         <div class="AppealpicCrop"><img src="images/Portfolio/image19.jpg"></div>
+         <div class="AppealpicCrop"><img src="images/gallery/image19.jpg" width="896" height="1344" alt="Portrait of a woman with pink hair and glasses against a weathered concrete wall"></div>
          <p>I can shoot for your any occasion! I have experience shooting graduation, life event, and romantic situations.</p>
          <p>Book a session with me below, or view my gallery to see some of my favorite shoots!
          </p>
-         <a href="contact.html"><button class="button button2">Book a Session</button></a> 
-         <a href="gallery.html"><button class="button button2">View Gallery</button></a>
+         <a href="contact.html" class="button button2">Book a Session</a>
+         <a href="gallery.html" class="button button2">View Gallery</a>
       </div>
+      </main>
       <!-- End of Main Body Content -->
-      <!-- Begin Footer Content -->
-      <footer class="block-a">
-         <div class="footer-block">
-            <div class="location-block">
-               <h5>Contact Me</h5>
-               <p>(949) 244-2421 <br/>
-                <a href="https://www.instagram.com/nickysandozphotography/">Instagram</a> <br/>
-               <a href="https://www.linkedin.com/in/nicky-sandoz/">LinkedIn</a> <br/>
-               <a href="mailto:nickysandozphotography@gmail.com">Email</a>
-                </p>
-            </div>
-            
-         </div>
-      </footer>
-      <!-- End Footer Content -->
+      <div id="site-footer" data-include="partials/footer.html"></div>
    </body>
 </html>
