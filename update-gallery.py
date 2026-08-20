@@ -7,6 +7,24 @@ has finished downloading. Dimensions are read straight out of the JPEG/PNG
 headers using only the standard library, so this runs unchanged on macOS and on
 the GitHub Actions runner.
 
+Where images live:
+
+  images/Portfolio/  Gallery photos, and nothing else. Every file here becomes
+                     a tile on the gallery page. Named imageNN-description.jpg,
+                     where NN sets the page order (highest first) and the
+                     description becomes the alt text.
+  images/site/       Images the pages use as furniture — the homepage collage,
+                     the About and Contact portrait, the two photos the homepage
+                     shows. Never scanned by this script, so nothing here can
+                     drift into the gallery, and nothing here is affected when
+                     the gallery is renumbered.
+  images/archive/    Kept but unpublished. Nothing links to these.
+
+The homepage's two photos are copies of gallery photos rather than links to
+them. That is deliberate: pointing a page at images/Portfolio/imageNN.jpg makes
+the page break the next time the gallery is renumbered, which is exactly what
+happened once already.
+
 Usage: python3 update-gallery.py
 """
 
@@ -23,17 +41,21 @@ OUTPUT = os.path.join(REPO_DIR, "gallery-images.json")
 
 EXTENSIONS = (".jpg", ".jpeg", ".png")
 
-# Files that live in images/Portfolio/ but are site furniture rather than
-# portfolio photos — the homepage collage, the About page portrait, and a stray
-# duplicate of image23.jpg. Add a filename here to hide it from the gallery.
-EXCLUDED = {
-    "collage.jpg",
-    "collage1.png",
-    "jellybelly.png",
-    "Nicky-Portrait.jpg",
-    "Nicky-Portrait-Pic.png",
-    "image23-copy.jpg",
-}
+# Escape hatch for a file that sits in images/Portfolio/ but should not appear
+# in the gallery. Deliberately empty: images/Portfolio/ now holds gallery photos
+# and nothing else.
+#
+# It used to list six files — the homepage collage, the About portrait, a CSS
+# background, a stray duplicate — that lived among the photos and had to be
+# named here to stay hidden. Keeping page furniture in the same folder as
+# portfolio work meant this list was the only thing separating them, and a file
+# added without a matching entry would silently appear on the gallery page.
+# Those files now live in images/site/ (used by the pages) and images/archive/
+# (kept but unpublished), so the folder itself draws the line and the list has
+# nothing left to do.
+#
+# Prefer moving a file to images/archive/ over adding it here.
+EXCLUDED = set()
 
 # JPEG start-of-frame markers carry the image dimensions. 0xC4 (define Huffman
 # table), 0xC8 (reserved) and 0xCC (define arithmetic coding) share the range
