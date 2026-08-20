@@ -133,6 +133,47 @@ def newest_first(name):
     return [(1, int(p)) if p.isdigit() else (0, p) for p in parts]
 
 
+def describe(name):
+    """Turn a filename into alt text, or "" when it carries no description.
+
+    The naming convention is imageNN-short-description.jpg, so the words after
+    the sequence number are a description of the photo that someone already
+    typed when adding it. Reusing them as alt text is what lets a screen reader
+    say "Tahoe engagement winter" instead of skipping the photo in silence, and
+    is the only description search engines ever see.
+
+    Only names that actually follow the convention produce text. A photo has to
+    carry a sequence number -- either the imageNN prefix that orders the page,
+    or the older trailing -NN -- before the remaining words are trusted as a
+    description. Without that test a camera original like 0K8A9860.JPG would be
+    read as its own description and announced letter by letter, which is worse
+    than saying nothing. Plain imageNN.jpg names have nothing after the number
+    and correctly yield "".
+
+    An empty result is deliberate rather than a failure: alt="" marks a photo as
+    having no text equivalent, and a screen reader passes over it quietly. That
+    is the right outcome for an undescribed photo -- inventing "image 80" would
+    only add noise.
+    """
+    stem = os.path.splitext(name)[0]
+
+    prefixed = re.match(r"^image\d+(.*)$", stem, re.IGNORECASE)
+    suffixed = re.match(r"^(.*?)-\d+$", stem)
+    if prefixed:
+        rest = prefixed.group(1)
+    elif suffixed:
+        rest = suffixed.group(1)
+    else:
+        return ""
+
+    words = [w for w in re.split(r"[-_\s]+", rest) if w]
+    if not words:
+        return ""
+
+    text = " ".join(words)
+    return text[:1].upper() + text[1:]
+
+
 def main():
     if not os.path.isdir(PHOTO_DIR):
         sys.exit("No images/Portfolio/ folder found at %s" % PHOTO_DIR)
@@ -150,13 +191,22 @@ def main():
     )
 
     images = []
+    undescribed = 0
     for name in names:
         try:
             width, height = image_size(os.path.join(PHOTO_DIR, name))
         except (OSError, ValueError, struct.error) as err:
             print("  skipped %s (%s)" % (name, err), file=sys.stderr)
             continue
-        images.append({"src": name, "width": width, "height": height})
+        alt = describe(name)
+        if not alt:
+            undescribed += 1
+        images.append({
+            "src": name,
+            "width": width,
+            "height": height,
+            "alt": alt,
+        })
 
     if not images:
         sys.exit("No readable images found in images/Portfolio/")
@@ -171,6 +221,14 @@ def main():
         f.write("\n")
 
     print("Gallery updated: %d photos. Push to GitHub to publish." % len(images))
+    if undescribed:
+        # Not an error -- older photos predate the naming convention. Worth
+        # saying out loud, though, because these are the photos a screen reader
+        # and a search engine cannot see anything in, and renaming one to
+        # imageNN-what-it-shows.jpg is all it takes to fix.
+        print("  %d of them have no description and will render with empty alt "
+              "text; rename them imageNN-short-description.jpg to fix."
+              % undescribed)
 
 
 if __name__ == "__main__":

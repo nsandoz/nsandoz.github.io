@@ -47,21 +47,26 @@
             });
     }
 
-    // Accepts both the current {src, width, height} entries and the older
+    // Accepts both the current {src, width, height, alt} entries and the older
     // plain-filename format, so an out-of-date gallery-images.json still renders
-    // (just without the pre-reserved tile shapes).
+    // (just without the pre-reserved tile shapes, or without descriptions).
     function normalise(images) {
         if (!Array.isArray(images)) {
             return [];
         }
         return images.map(function (entry) {
             if (typeof entry === 'string') {
-                return { src: entry, width: null, height: null };
+                return { src: entry, width: null, height: null, alt: '' };
             }
             return {
                 src: entry.src,
                 width: entry.width || null,
-                height: entry.height || null
+                height: entry.height || null,
+                // Missing rather than empty means the JSON predates alt text.
+                // Both end up as '', which is the correct markup for a photo
+                // with no text equivalent — a screen reader skips it quietly
+                // instead of reading out a filename.
+                alt: entry.alt || ''
             };
         }).filter(function (photo) {
             return !!photo.src;
@@ -75,14 +80,24 @@
             var tile = document.createElement('button');
             tile.type = 'button';
             tile.className = 'tile';
-            tile.setAttribute('aria-label', 'View photo ' + (index + 1) + ' of ' + photos.length);
+            // The tile is a button, so its accessible name is what gets read
+            // out — and a screen reader announces the button's aria-label in
+            // place of the image's alt, not as well as it. The description has
+            // to be folded in here or it would never be heard, leaving 84
+            // identical "View photo N of 84" buttons.
+            tile.setAttribute('aria-label', photo.alt
+                ? 'View ' + photo.alt + ', photo ' + (index + 1) + ' of ' + photos.length
+                : 'View photo ' + (index + 1) + ' of ' + photos.length);
             tile.addEventListener('click', function () {
                 open(index);
             });
 
             var img = document.createElement('img');
             img.src = IMAGE_PATH + photo.src;
-            img.alt = '';
+            // Still set alt on the image itself even though the button's label
+            // is what assistive tech announces: this is the text search engines
+            // index, and what shows if the photo fails to load.
+            img.alt = photo.alt;
             img.loading = 'lazy';
             img.decoding = 'async';
             if (photo.width && photo.height) {
@@ -194,6 +209,10 @@
             if (img.getAttribute('src') !== src) {
                 img.src = src;
             }
+            // Set outside the src check: with only two or three photos the same
+            // src can stay in a slot while the photo it represents changes, and
+            // a stale description is worse than none.
+            img.alt = photo.alt;
         });
         counter.textContent = (current + 1) + ' / ' + photos.length;
     }
