@@ -97,11 +97,64 @@
 
         grid.appendChild(fragment);
         status.hidden = true;
+        layoutGrid();
 
         if (photos.length < 2) {
             lightbox.querySelector('.lightbox-prev').hidden = true;
             lightbox.querySelector('.lightbox-next').hidden = true;
         }
+    }
+
+    /* Give every tile a row span matching its photo's proportions.
+
+       The grid in css/gallery.css is made of short fixed-height rows; a tile
+       covers as many of them as its photo is tall. That is what produces the
+       gapless masonry look while still laying tiles out left to right, which
+       plain CSS multi-column could not do — it filled each column top to
+       bottom, so the second photo on screen was the seventeenth in the
+       gallery.
+
+       Heights are worked out from the width/height in gallery-images.json
+       rather than from the loaded image, so the layout is correct on first
+       paint instead of reshuffling as photos stream in. */
+    function layoutGrid() {
+        if (!grid) {
+            return;
+        }
+
+        var styles = window.getComputedStyle(grid);
+        if (styles.display !== 'grid') {
+            return; // Older browser falling back to normal block flow.
+        }
+
+        var gap = parseFloat(styles.rowGap) || 0;
+        var unit = parseFloat(styles.gridAutoRows) || 0;
+        if (!unit) {
+            return; // No row unit to measure against; leave tiles as they are.
+        }
+
+        var tiles = grid.querySelectorAll('.tile');
+        for (var i = 0; i < tiles.length; i++) {
+            var tile = tiles[i];
+            var img = tile.querySelector('img');
+            var width = tile.getBoundingClientRect().width;
+            var ratio = img && Number(img.getAttribute('height')) / Number(img.getAttribute('width'));
+            // Fall back to whatever the tile currently measures if the photo's
+            // dimensions are missing from the JSON.
+            var height = (width && isFinite(ratio) && ratio > 0)
+                ? width * ratio
+                : tile.getBoundingClientRect().height;
+
+            tile.style.gridRowEnd = 'span ' + Math.max(1, Math.ceil((height + gap) / (unit + gap)));
+        }
+    }
+
+    // Column widths change with the viewport, so the spans have to be redone.
+    // Debounced because resize fires continuously while a window is dragged.
+    var relayoutTimer = null;
+    function scheduleRelayout() {
+        window.clearTimeout(relayoutTimer);
+        relayoutTimer = window.setTimeout(layoutGrid, 120);
     }
 
     // Fade each photo in once it has actually decoded. Cached images can be
@@ -346,6 +399,7 @@
         });
 
         bindSwipe(lightbox.querySelector('.lightbox-stage'));
+        window.addEventListener('resize', scheduleRelayout);
         load();
     }
 
