@@ -2,13 +2,11 @@
 /* ******************************************************
 	Author URI: https://codeconvey.com/
 	Demo Purpose Only - May not require to add.
-
-	The template's own Raleway @import and its `body`/`a` font-family rules
-	were removed: gallery.html is the only page that loads this file, so those
-	rules made the Gallery page's nav and body text render in Raleway while
-	every other page used futura-pt/Poppins from stylesheet.css. Typography for
-	the whole site is set in stylesheet.css; this file handles layout only.
+	font-family: "Raleway",sans-serif;
 *********************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900');
+
 
 
 html {
@@ -28,8 +26,10 @@ body {
     line-height: 24px;
     margin: 0;
 	padding:0;
+	font-family: "Raleway",sans-serif;
 }
 a{
+	font-family: "Raleway",sans-serif;
 	text-decoration: none;
 	outline: none;
 }
