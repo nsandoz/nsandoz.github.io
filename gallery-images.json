@@ -1,6 +1,21 @@
 {
   "images": [
     {
+      "src": "image83-triathalon.jpg",
+      "width": 1344,
+      "height": 2016
+    },
+    {
+      "src": "image82-triathalon.jpg",
+      "width": 1271,
+      "height": 1907
+    },
+    {
+      "src": "image81-triathalon.jpg",
+      "width": 2016,
+      "height": 1344
+    },
+    {
       "src": "image80.jpg",
       "width": 1344,
       "height": 2016
@@ -406,6 +421,6 @@
       "height": 1344
     }
   ],
-  "count": 81,
-  "last_updated": "2026-08-20T14:34:05Z"
+  "count": 84,
+  "last_updated": "2026-08-20T15:50:56Z"
 }
