@@ -7,12 +7,6 @@
       "alt": "Film camera portrait"
     },
     {
-      "src": "image900-pet-portraits.jpg",
-      "width": 2016,
-      "height": 1344,
-      "alt": "Pet portraits"
-    },
-    {
       "src": "image890-pet-portraits.jpg",
       "width": 1344,
       "height": 2016,
@@ -547,6 +541,6 @@
       "alt": ""
     }
   ],
-  "count": 91,
-  "last_updated": "2026-08-20T17:38:18Z"
+  "count": 90,
+  "last_updated": "2026-08-20T17:46:40Z"
 }
