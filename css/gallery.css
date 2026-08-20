@@ -32,19 +32,33 @@
 }
 
 /* ===== Masonry grid =====
-   CSS multi-column gives a true gapless masonry: each tile keeps its own
-   height and the columns stay balanced, with no fixed-height cropping. */
+   Still a gapless masonry — each tile keeps its own height, nothing is cropped
+   to a fixed shape — but built with CSS grid rather than multi-column.
+
+   Multi-column was the obvious way to get this look and it reads in the wrong
+   order: it fills the first column top to bottom before starting the second,
+   so with four columns the second photo a visitor sees is the seventeenth in
+   the gallery. Grid lays out left to right, one row at a time, so the order on
+   screen matches the order in gallery-images.json.
+
+   The variable heights come from `grid-auto-rows`: rows are a small fixed
+   unit, and js/gallery-grid.js gives each tile a `grid-row: span N` worked out
+   from the photo's real proportions. If that script does not run, every tile
+   simply spans one row and the grid degrades to a plain aligned one — still in
+   the right order. Keep GRID_ROW_UNIT in gallery-grid.js in step with
+   `grid-auto-rows` below. */
 .masonry {
     max-width: 1500px;
     margin: 0 auto;
-    column-count: 4;
-    column-gap: 1.1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1em;
+    grid-auto-rows: 8px;
+    align-items: start;
 }
 
 .tile {
-    break-inside: avoid;
-    page-break-inside: avoid; /* older WebKit */
-    margin: 0 0 1.1em 0;
+    margin: 0;
     position: relative;
     overflow: hidden;
     border-radius: 3px;
@@ -248,11 +262,11 @@ body.lightbox-open {
 
 /* ===== Responsive ===== */
 @media screen and (max-width: 1200px) {
-    .masonry { column-count: 3; }
+    .masonry { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media screen and (max-width: 820px) {
-    .masonry { column-count: 2; }
+    .masonry { grid-template-columns: repeat(2, 1fr); }
     .gallery-page { padding: 2.2em 1.2em 3.5em; }
 }
 
@@ -260,12 +274,10 @@ body.lightbox-open {
    screen isn't worth showing. */
 @media screen and (max-width: 560px) {
     .masonry {
-        column-count: 1;
-        column-gap: 0;
+        grid-template-columns: 1fr;
+        gap: 0.9em;
         max-width: 34em;
     }
-
-    .tile { margin-bottom: 0.9em; }
 
     .gallery-page { padding: 1.6em 1em 3em; }
 
