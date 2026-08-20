@@ -1,6 +1,9 @@
 /*CSS DOCUMENT*/
 @import url("https://use.typekit.net/ipj0jot.css");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+/* 600 and 700 are needed as well as the lighter weights: the current page's
+   nav link is set in Poppins 700, and without the real weight the browser
+   fakes it by smearing the 500, which reads as a different typeface. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -83,7 +86,7 @@ div {
         padding-top: 2em;
 }
 h1 {
-	font-family: futura-pt, sans-serif;
+	font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-style: normal;
 	font-size: 2.8em;
@@ -93,7 +96,7 @@ h1 {
 
 h2 {
 	margin: 2em 0em 0em 2%;
-	font-family: futura-pt, sans-serif;
+	font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-style: normal;
 	color: rgb(50, 50, 50);
@@ -120,7 +123,7 @@ h4 {
 }
 
 h5 {
-	font-family: futura-pt, sans-serif;
+	font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-style: normal;
 	font-size: 1.8em;
@@ -170,8 +173,13 @@ a:focus-visible {
 }
 
 .logo {
+  /* futura-pt comes from Typekit and renders the same everywhere. The old
+     stack asked for a locally installed 'Futura', which only macOS has, so
+     most visitors were silently getting a system sans-serif instead. macOS
+     resolves plain 'Futura' to its Medium cut, so 500 is the weight that
+     matches what this logo has always looked like on the designer's machine. */
   font-family: futura-pt, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: 2em;
     color: black;
@@ -239,7 +247,7 @@ a.selected {
 }
 nav ul li {
 	list-style: none;
-	font-family: futura-pt, sans-serif;
+	font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-style: normal;
 	font-size: 1.1em;
@@ -254,7 +262,7 @@ nav ul li a {
 	/* Stated on the link itself, not left to inherit from the li: gallery.html
 	   loads third-party CSS whose bare `a` rules would otherwise win, which is
 	   what made the Gallery nav render in a different face to every other page. */
-	font-family: futura-pt, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-weight: inherit;
 }
 
