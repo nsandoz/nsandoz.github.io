@@ -13,12 +13,6 @@
       "alt": "Pet portraits"
     },
     {
-      "src": "image880-pet-portraits-dog.jpg",
-      "width": 1344,
-      "height": 2016,
-      "alt": "Pet portraits dog"
-    },
-    {
       "src": "image870-pet-portraits-dog.jpg",
       "width": 1344,
       "height": 2016,
@@ -139,12 +133,6 @@
       "alt": ""
     },
     {
-      "src": "image670.jpg",
-      "width": 2016,
-      "height": 1344,
-      "alt": ""
-    },
-    {
       "src": "image660.jpg",
       "width": 1344,
       "height": 2016,
@@ -176,12 +164,6 @@
     },
     {
       "src": "image610.jpg",
-      "width": 1344,
-      "height": 2016,
-      "alt": ""
-    },
-    {
-      "src": "image600.jpg",
       "width": 1344,
       "height": 2016,
       "alt": ""
@@ -229,6 +211,12 @@
       "alt": ""
     },
     {
+      "src": "image521.jpg",
+      "width": 1344,
+      "height": 2016,
+      "alt": ""
+    },
+    {
       "src": "image520.jpg",
       "width": 2016,
       "height": 1344,
@@ -238,6 +226,18 @@
       "src": "image510.jpg",
       "width": 1256,
       "height": 1884,
+      "alt": ""
+    },
+    {
+      "src": "image502.jpg",
+      "width": 1058,
+      "height": 1587,
+      "alt": ""
+    },
+    {
+      "src": "image501.jpg",
+      "width": 2016,
+      "height": 1344,
       "alt": ""
     },
     {
@@ -265,18 +265,6 @@
       "alt": ""
     },
     {
-      "src": "image460.jpg",
-      "width": 1058,
-      "height": 1587,
-      "alt": ""
-    },
-    {
-      "src": "image450.jpg",
-      "width": 2016,
-      "height": 1344,
-      "alt": ""
-    },
-    {
       "src": "image440.jpg",
       "width": 896,
       "height": 1344,
@@ -290,12 +278,6 @@
     },
     {
       "src": "image420.jpg",
-      "width": 896,
-      "height": 1344,
-      "alt": ""
-    },
-    {
-      "src": "image410.jpg",
       "width": 896,
       "height": 1344,
       "alt": ""
@@ -373,12 +355,6 @@
       "alt": ""
     },
     {
-      "src": "image280.jpg",
-      "width": 896,
-      "height": 1344,
-      "alt": ""
-    },
-    {
       "src": "image270.jpg",
       "width": 896,
       "height": 1344,
@@ -386,12 +362,6 @@
     },
     {
       "src": "image260.jpg",
-      "width": 896,
-      "height": 1344,
-      "alt": ""
-    },
-    {
-      "src": "image250.jpg",
       "width": 896,
       "height": 1344,
       "alt": ""
@@ -428,12 +398,6 @@
     },
     {
       "src": "image190.jpg",
-      "width": 896,
-      "height": 1344,
-      "alt": ""
-    },
-    {
-      "src": "image180.jpg",
       "width": 896,
       "height": 1344,
       "alt": ""
@@ -541,6 +505,6 @@
       "alt": ""
     }
   ],
-  "count": 90,
-  "last_updated": "2026-08-20T17:46:40Z"
+  "count": 84,
+  "last_updated": "2026-08-20T17:53:42Z"
 }
