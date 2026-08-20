@@ -186,8 +186,11 @@ display:inline-block;
     background-color: rgb(255,255,255);
     padding: 2.4em;
     margin: auto;
-    border-color: black;
-    border-style: solid;
+    /* A single rule under the header, not a box around it. Setting only
+       border-color and border-style left the width at its initial value of
+       `medium`, which browsers resolve to 3px on all four sides — so the
+       header rendered inside a heavy black rectangle. */
+    border-bottom: 1px solid black;
 }
 
 .block-a {
